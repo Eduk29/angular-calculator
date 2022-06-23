@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
 
-import { numberButtonConfiguration } from './../config/button-configuration';
+import { numberButtonConfiguration, operationsButtonConfiguration } from './../config/button-configuration';
 
 @Component({
   selector: 'app-core',
@@ -9,15 +9,19 @@ import { numberButtonConfiguration } from './../config/button-configuration';
   styleUrls: ['./core.component.scss'],
 })
 export class CoreComponent implements OnInit {
-  public buttonArray: any[] = [];
+  public numberButtonsArray: any[] = [];
+  public operationButtonsArray: any[] = [];
   public displayData: string | number = 0;
-  public buttonMatrixDisplay: any [] [] = [];
+  public numberButtonsMatrixDisplay: any [] [] = [];
+  public operationButtonsMatrixDisplay: any [] [] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.buttonArray = numberButtonConfiguration;
-    this.buttonMatrixDisplay = this.createNumberButtonsMatrix();
+    this.numberButtonsArray = numberButtonConfiguration;
+    this.operationButtonsArray = operationsButtonConfiguration;
+    this.numberButtonsMatrixDisplay = this.createNumberButtonsMatrix();
+    this.operationButtonsMatrixDisplay = this.createOperationButtonsMatrix();
   }
 
   private createNumberButtonsMatrix(): any [] [] {
@@ -27,18 +31,33 @@ export class CoreComponent implements OnInit {
     let initial = 0;
 
     for (let i = 0; i < numberRows; i++) {
-      buttonMatrix.push(this.createMatrixRow(initial, rowSize));
+      buttonMatrix.push(this.createMatrixRow(initial, rowSize, this.numberButtonsArray));
       initial += 3;
     }
-    console.log(buttonMatrix)
+    console.log(buttonMatrix);
     return buttonMatrix;
   }
 
-  private createMatrixRow(initial: number, rowSize: number): any[] {
+  private createOperationButtonsMatrix(): any [] [] {
+    const buttonMatrix: any[] [] = [];
+    const numberRows = operationsButtonConfiguration.length / 1;
+    const rowSize = 1;
+    let initial = 0;
+
+    for (let i = 0; i < numberRows; i++) {
+      buttonMatrix.push(this.createMatrixRow(initial, rowSize, this.operationButtonsArray));
+      initial += 1;
+    }
+    console.log(buttonMatrix);
+    return buttonMatrix;
+
+  }
+
+  private createMatrixRow(initial: number, rowSize: number, array: any[]): any[] {
     let buttonRow: any[] = [];
 
-    this.buttonArray.map(() => {
-      buttonRow = this.buttonArray.slice(initial, initial + rowSize);
+    array.map(() => {
+      buttonRow = array.slice(initial, initial + rowSize);
     });
     return buttonRow;
   }
