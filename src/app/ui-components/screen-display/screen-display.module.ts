@@ -2,18 +2,20 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
-import { DisplayComponent } from './display.component';
+import { ScreenDisplayComponent } from './screen-display.component';
+
+
 
 @NgModule({
   declarations: [
-    DisplayComponent
+    ScreenDisplayComponent
   ],
   imports: [
     CommonModule,
     MatCardModule
   ],
   exports: [
-    DisplayComponent
+    ScreenDisplayComponent
   ]
 })
-export class DisplayModule { }
+export class ScreenDisplayModule { }
