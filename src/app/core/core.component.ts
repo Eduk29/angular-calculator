@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { of } from 'rxjs';
 
 import { numberButtonConfiguration, operationsButtonConfiguration } from './../config/button-configuration';
 
@@ -9,8 +8,6 @@ import { numberButtonConfiguration, operationsButtonConfiguration } from './../c
   styleUrls: ['./core.component.scss'],
 })
 export class CoreComponent implements OnInit {
-  public numberButtonsArray: any[] = [];
-  public operationButtonsArray: any[] = [];
   public displayData: string | number = 0;
   public numberButtonsMatrixDisplay: any [] [] = [];
   public operationButtonsMatrixDisplay: any [] [] = [];
@@ -18,8 +15,6 @@ export class CoreComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.numberButtonsArray = numberButtonConfiguration;
-    this.operationButtonsArray = operationsButtonConfiguration;
     this.numberButtonsMatrixDisplay = this.createNumberButtonsMatrix();
     this.operationButtonsMatrixDisplay = this.createOperationButtonsMatrix();
   }
@@ -31,7 +26,7 @@ export class CoreComponent implements OnInit {
     let initial = 0;
 
     for (let i = 0; i < numberRows; i++) {
-      buttonMatrix.push(this.createMatrixRow(initial, rowSize, this.numberButtonsArray));
+      buttonMatrix.push(this.createMatrixRow(initial, rowSize, numberButtonConfiguration));
       initial += 3;
     }
     console.log(buttonMatrix);
@@ -45,7 +40,7 @@ export class CoreComponent implements OnInit {
     let initial = 0;
 
     for (let i = 0; i < numberRows; i++) {
-      buttonMatrix.push(this.createMatrixRow(initial, rowSize, this.operationButtonsArray));
+      buttonMatrix.push(this.createMatrixRow(initial, rowSize, operationsButtonConfiguration));
       initial += 1;
     }
     console.log(buttonMatrix);
