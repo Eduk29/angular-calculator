@@ -1,3 +1,4 @@
+import { ButtonConfiguration } from './../../core/model/button-configuration.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  @Input() label: string = '';
+  @Input() buttonConfiguration: ButtonConfiguration = {} as ButtonConfiguration;
   @Input() color: string = 'primary';
 
   constructor() { }
 
   ngOnInit(): void { }
+
+  public buttonClickEvent(): void {
+    console.log('teste');
+  }
 
 }

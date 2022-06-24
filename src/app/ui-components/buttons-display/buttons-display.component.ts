@@ -1,3 +1,4 @@
+import { ButtonConfiguration } from './../../core/model/button-configuration.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +10,13 @@ export class ButtonsDisplayComponent implements OnInit {
 
   @Input() numberButtonsMatrixDisplay: any [] [] = [];
   @Input() operationButtonsMatrixDisplay: any [] [] = [];
+  @Input() generalPurposeButtonsMatrixDisplay: any [] = [];
 
   constructor() { }
 
   ngOnInit(): void { }
 
+  public defineButtonSize(button: ButtonConfiguration): string {
+    return button.value !== '=' ? 'mx-1 w-33' : 'ms-1 w-66';
+  }
 }

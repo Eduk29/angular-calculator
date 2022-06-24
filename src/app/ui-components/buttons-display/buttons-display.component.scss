@@ -5,3 +5,14 @@
 .w-33 {
   width: 33%;
 }
+
+#general-purpose-buttons {
+  > :not(:last-child) {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+  }
+
+  > :last-child {
+    margin-left: 0.25rem;
+  }
+}

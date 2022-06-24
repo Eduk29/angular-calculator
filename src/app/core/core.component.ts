@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { numberButtonConfiguration, operationsButtonConfiguration } from './../config/button-configuration';
+import { numberButtonConfiguration, operationsButtonConfiguration, generalPurposeButtonConfiguration } from './../config/button-configuration';
 
 @Component({
   selector: 'app-core',
@@ -11,12 +11,14 @@ export class CoreComponent implements OnInit {
   public displayData: string | number = 0;
   public numberButtonsMatrixDisplay: any [] [] = [];
   public operationButtonsMatrixDisplay: any [] [] = [];
+  public generalPurposeMatrixDisplay: any [] = [];
 
   constructor() {}
 
   ngOnInit(): void {
     this.numberButtonsMatrixDisplay = this.createNumberButtonsMatrix();
     this.operationButtonsMatrixDisplay = this.createOperationButtonsMatrix();
+    this.generalPurposeMatrixDisplay = generalPurposeButtonConfiguration;
   }
 
   private createNumberButtonsMatrix(): any [] [] {
@@ -29,7 +31,6 @@ export class CoreComponent implements OnInit {
       buttonMatrix.push(this.createMatrixRow(initial, rowSize, numberButtonConfiguration));
       initial += 3;
     }
-    console.log(buttonMatrix);
     return buttonMatrix;
   }
 
@@ -45,7 +46,6 @@ export class CoreComponent implements OnInit {
     }
     console.log(buttonMatrix);
     return buttonMatrix;
-
   }
 
   private createMatrixRow(initial: number, rowSize: number, array: any[]): any[] {
