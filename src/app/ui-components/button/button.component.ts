@@ -12,18 +12,17 @@ export class ButtonComponent implements OnInit {
   @Input() buttonConfiguration: ButtonConfiguration = {} as ButtonConfiguration;
   @Input() color: string = 'primary';
 
+  public clickEventHandler: any = {
+    number: () => this.coreService.numberClickEvent.next(this.buttonConfiguration),
+    operation: () => this.coreService.operationClickEvent.next(this.buttonConfiguration),
+    general: () => this.coreService.generalClickEvent.next(this.buttonConfiguration)
+  };
+
   constructor(private coreService: CoreService) { }
 
   ngOnInit(): void { }
 
   public buttonClickEvent(): void {
-    // TODO: Change number string for enum
-    if(this.buttonConfiguration.type === 'number') {
-      this.coreService.numberClickEvent.next(this.buttonConfiguration);
-    } else if (this.buttonConfiguration.type === 'operation') {
-      this.coreService.operationClickEvent.next(this.buttonConfiguration);
-    } else {
-      this.coreService.generalClickEvent.next(this.buttonConfiguration);
-    }
+    this.clickEventHandler[this.buttonConfiguration.type]();
   }
 }
