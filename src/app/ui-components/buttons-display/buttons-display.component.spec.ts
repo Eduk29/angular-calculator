@@ -24,19 +24,19 @@ describe('ButtonsDisplayComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`numberButtonsMatrixDisplay SHOLD be empty WHEN component is created`, () => {
+  it(`numberButtonsMatrixDisplay SHOULD be empty WHEN component is created`, () => {
     expect(component.numberButtonsMatrixDisplay).toEqual([]);
   });
 
-  it(`operationButtonsMatrixDisplay SHOLD be empty WHEN component is created`, () => {
+  it(`operationButtonsMatrixDisplay SHOULD be empty WHEN component is created`, () => {
     expect(component.operationButtonsMatrixDisplay).toEqual([]);
   });
 
-  it(`generalPurposeButtonsMatrixDisplay SHOLD be empty WHEN component is created`, () => {
+  it(`generalPurposeButtonsMatrixDisplay SHOULD be empty WHEN component is created`, () => {
     expect(component.generalPurposeButtonsMatrixDisplay).toEqual([]);
   });
 
-  it(`Button CSS classes SHOLD be mx-1 and w-33  WHEN the button is not the equal button`, () => {
+  it(`Button CSS classes SHOULD be mx-1 and w-33  WHEN the button is not the equal button`, () => {
     const fakeButtonConfiguration: ButtonConfiguration = {
       id: 1,
       label: 'fake AC button',
@@ -49,7 +49,7 @@ describe('ButtonsDisplayComponent', () => {
     expect(cssClass).toBe('mx-1 w-33');
   });
 
-  it(`Button CSS classes SHOLD be ms-1 and w-66  WHEN the button is the equal button`, () => {
+  it(`Button CSS classes SHOULD be ms-1 and w-66  WHEN the button is the equal button`, () => {
     const fakeButtonConfiguration: ButtonConfiguration = {
       id: 1,
       label: 'fake equal button',

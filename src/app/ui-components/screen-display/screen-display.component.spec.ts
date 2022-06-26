@@ -22,4 +22,9 @@ describe('ScreenDisplayComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`displayData SHOULD be zero WHEN component is created`, () => {
+    expect(component.displayData).toEqual(0);
+  });
+
 });
