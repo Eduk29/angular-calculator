@@ -8,8 +8,8 @@ import {
   operationsButtonConfiguration,
   operationsRowSize,
 } from './../config/button-configuration';
-import { ButtonConfiguration } from './model/button-configuration.model';
 import { CoreService } from './services/core.service';
+import { ButtonConfiguration } from './model/button-configuration.model';
 import { operationsUtils } from './utils/operations.utils';
 
 @Component({
@@ -74,10 +74,10 @@ export class CoreComponent implements OnInit {
     }
   }
 
-  private getRowFromArray(array: ButtonConfiguration[], initial: number, rowSize: number): ButtonConfiguration[] {
+  private getRowFromArray(buttonConfigurations: ButtonConfiguration[], initial: number, rowSize: number): ButtonConfiguration[] {
     let buttonRow: any[] = [];
-    array.map(() => {
-      buttonRow = array.slice(initial, initial + rowSize);
+    buttonConfigurations.map(() => {
+      buttonRow = buttonConfigurations.slice(initial, initial + rowSize);
     });
     return buttonRow;
   }

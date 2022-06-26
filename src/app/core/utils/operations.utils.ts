@@ -1,5 +1,5 @@
 export const operationsUtils = (type: string, firstNumber: number, secondNumber: number) => {
-  const operations: any = {
+  var operations: any = {
     add: () => addOperation(firstNumber, secondNumber),
     minus: () => minusOperation(firstNumber, secondNumber),
     mul: () => multiplicationOperation(firstNumber, secondNumber),
