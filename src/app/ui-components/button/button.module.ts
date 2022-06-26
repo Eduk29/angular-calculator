@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
-import { CoreService } from './../../core/core.service';
+import { CoreService } from './../../core/services/core.service';
 import { ButtonComponent } from './button.component';
 
 @NgModule({

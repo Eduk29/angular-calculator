@@ -1,4 +1,4 @@
-import { ButtonConfiguration } from './model/button-configuration.model';
+import { ButtonConfiguration } from './../model/button-configuration.model';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 

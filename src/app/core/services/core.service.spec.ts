@@ -1,4 +1,4 @@
-import { ButtonConfiguration } from './model/button-configuration.model';
+import { ButtonConfiguration } from '../model/button-configuration.model';
 import { TestBed } from '@angular/core/testing';
 
 import { CoreService } from './core.service';

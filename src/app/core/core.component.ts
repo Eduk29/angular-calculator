@@ -8,8 +8,8 @@ import {
   operationsButtonConfiguration,
   operationsRowSize,
 } from './../config/button-configuration';
-import { CoreService } from './core.service';
 import { ButtonConfiguration } from './model/button-configuration.model';
+import { CoreService } from './services/core.service';
 import { operationsUtils } from './utils/operations.utils';
 
 @Component({

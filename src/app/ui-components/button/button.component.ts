@@ -1,4 +1,4 @@
-import { CoreService } from './../../core/core.service';
+import { CoreService } from './../../core/services/core.service';
 import { ButtonConfiguration } from './../../core/model/button-configuration.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 

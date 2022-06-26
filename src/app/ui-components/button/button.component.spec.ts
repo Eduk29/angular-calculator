@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoreService } from './../../core/core.service';
+import { CoreService } from './../../core/services/core.service';
 import { ButtonConfiguration } from './../../core/model/button-configuration.model';
 import { ButtonComponent } from './button.component';
 
