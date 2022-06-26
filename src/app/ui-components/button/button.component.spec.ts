@@ -4,7 +4,7 @@ import { CoreService } from './../../core/core.service';
 import { ButtonConfiguration } from './../../core/model/button-configuration.model';
 import { ButtonComponent } from './button.component';
 
-fdescribe('ButtonComponent', () => {
+describe('ButtonComponent', () => {
   let component: ButtonComponent;
   let fixture: ComponentFixture<ButtonComponent>;
   let service: CoreService;
