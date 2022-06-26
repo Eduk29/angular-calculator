@@ -112,15 +112,15 @@ export class CoreComponent implements OnInit {
   }
 
   private registerClickSubscriptions(): void {
-    this.coreService.numberClickEvent.subscribe(button => {
+    this.coreService.numberClickEvent$.subscribe(button => {
       this.numberButtonClickEvent(button);
     });
 
-    this.coreService.operationClickEvent.subscribe(button => {
+    this.coreService.operationClickEvent$.subscribe(button => {
       this.operationButtonClickEvent(button);
     });
 
-    this.coreService.generalClickEvent.subscribe(button => {
+    this.coreService.generalClickEvent$.subscribe(button => {
       this.generalButtonClickEvent(button);
     });
   }

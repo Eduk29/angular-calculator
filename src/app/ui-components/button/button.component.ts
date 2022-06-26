@@ -13,9 +13,9 @@ export class ButtonComponent implements OnInit {
   @Input() color: string = 'primary';
 
   public clickEventHandler: any = {
-    number: () => this.coreService.numberClickEvent.next(this.buttonConfiguration),
-    operation: () => this.coreService.operationClickEvent.next(this.buttonConfiguration),
-    general: () => this.coreService.generalClickEvent.next(this.buttonConfiguration)
+    number: () => this.coreService.callNextOnNumberSubject(this.buttonConfiguration),
+    operation: () => this.coreService.callNextOnOperationSubject(this.buttonConfiguration),
+    general: () => this.coreService.callNextOnGeneralSubject(this.buttonConfiguration)
   };
 
   constructor(private coreService: CoreService) { }
