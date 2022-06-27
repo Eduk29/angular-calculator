@@ -10,40 +10,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Branch Checkout
       - uses: actions/checkout@v2
+
+      - name: Node install
       - uses: actions/setup-node@v2
         with:
           node-version: '16.14.0'
 
-      - run: npm install
-      - run: npm run build
+      - name: Install dependencies
+        run: npm install
 
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests
+      - name: Test Application
         run: npm run test:headless
 
-  deploy:
-    needs: [build, test]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Start deploy
-        uses: bobheadxi/deployments@v0.4.3
-        id: deployment
-        with:
-          step: start
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build App
+        run: npm run build
 
-      - name: Checkout branch
-        uses: actions/checkout@v2
-
-      - name: Unit tests
-        run: npm run test:headless
-
-      - name: Deploy vercel
-        if: success()
+      - name: Deploy App
         uses: amondnet/vercel/action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
