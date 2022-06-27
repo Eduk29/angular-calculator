@@ -16,3 +16,9 @@
     margin-left: 0.25rem;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #operation-buttons {
+    padding-left: 5px;
+  }
+}
