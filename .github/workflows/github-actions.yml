@@ -1,5 +1,5 @@
 name: Angular Calculator Actions
-uses: amondnet/vercel-action@v25
+
 on:
   push:
     branches:
