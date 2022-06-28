@@ -1,6 +1,11 @@
 # Angular Calculator
 
-[![Vercel](https://img.shields.io/github/checks-status/Eduk29/angular-calculator/main)](https://angular-calculator-hazel.vercel.app/)
+![build-badge](https://img.shields.io/github/workflow/status/Eduk29/angular-calculator/Angular%20Calculator%20Actions/main?style=plastic)
+![code-coverage-badge](https://badgen.net/codecov/c/github/eduk29/angular-calculator)
+![check-badge](https://img.shields.io/github/checks-status/Eduk29/angular-calculator/main)
+![latest-tag-badge](https://badgen.net/github/tag/eduk29/angular-calculator)
+![last-commit-badge](https://img.shields.io/github/last-commit/eduk29/angular-calculator?style=plastic)
+
 
 
 This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
