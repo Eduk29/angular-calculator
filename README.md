@@ -1,5 +1,8 @@
 # Angular Calculator
 
+[![Vercel](https://img.shields.io/github/checks-status/Eduk29/angular-calculator/main)](https://angular-calculator-hazel.vercel.app/)
+
+
 This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
 
 This application is based in Angular with Typescript and RxJS. For unit test, the application use Karma and Jasmine. This readme presents to you the installation details, application startup guide, dependencies and more. This application use some patterns like [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) and [Git flow](https://nvie.com/posts/a-successful-git-branching-model/).
