@@ -68,6 +68,6 @@ npm run test-coverage
 
 ## Developer :computer:
 
-José Eduardo Trindade E Marques
-[LinkedIn](https://www.linkedin.com/in/eduardomarques29/)
-edu.temarques@gmail.com
+José Eduardo Trindade E Marques  
+[LinkedIn](https://www.linkedin.com/in/eduardomarques29/)  
+edu.temarques@gmail.com  
