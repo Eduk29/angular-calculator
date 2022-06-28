@@ -1,4 +1,4 @@
-# AngularCalculator
+# Angular Calculator
 
 This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
 
