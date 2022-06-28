@@ -1,27 +1,73 @@
 # AngularCalculator
 
+This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
+
+This application is based in Angular with Typescript and RxJS. For unit test, the application use Karma and Jasmine. This readme presents to you the installation details, application startup guide, dependencies and more. This application use some patterns like [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) and [Git flow](https://nvie.com/posts/a-successful-git-branching-model/).
+
+If you want a live version [click here](https://angular-calculator-hazel.vercel.app/). But if you want to run the application in your pc, follow the Installation and Start Application section and we recommend to you download the following versions/dependencies installed on your computer to start the application:
+
+- NodeJS => v.16.14.0
+- NPM => v8.3.1
+- Angular CLI => v11.1.2
+
+## Installation
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
-## Development server
+**1 -** Clone the project and install the dependencies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ git clone https://github.com/Eduk29/angular-calculator.git
+$ cd angular-calculator
+$ npm install
+```
 
-## Code scaffolding
+## Start Application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After you clone the repository, to start the application open the root directory (the directory of package.json) in a command terminal and run the following instruction:
 
-## Build
+```bash
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+When the build is over, open your favorite browser in [http://localhost:4200](http://localhost:4200) to view it.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the unit tests of application run the following instruction:
 
-## Running end-to-end tests
+```bash
+npm run test
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+But if you want only the code coverage run the following instruction:
 
-## Further help
+```bash
+npm run test-coverage
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Dependecies
+
+- Angular Framework
+- Angular Material
+- Bootstrap
+- Karma
+- Jasmine
+- RxJS
+- Typescript
+
+## Deploy Plataform and CI/CD
+
+- [Vercel](https://vercel.com/)
+
+## Application Roadmap
+
+- Tests with Cypress
+- Implement a percentage calculator
+- Implement a square root calculator
+
+## Developer :computer:
+
+José Eduardo Trindade E Marques
+[LinkedIn](https://www.linkedin.com/in/eduardomarques29/)
+edu.temarques@gmail.com
