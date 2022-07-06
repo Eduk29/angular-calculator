@@ -9,7 +9,9 @@
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless --codeCoverage=true",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +37,7 @@
     "@angular-devkit/build-angular": "~13.3.8",
     "@angular/cli": "~13.3.8",
     "@angular/compiler-cli": "~13.3.11",
+    "@cypress/schematic": "^2.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
