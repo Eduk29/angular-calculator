@@ -7,7 +7,6 @@
 ![last-commit-badge](https://img.shields.io/github/last-commit/eduk29/angular-calculator?style=plastic)
 
 
-
 This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
 
 This application is based in Angular with Typescript and RxJS. For unit test, the application use Karma and Jasmine. This readme presents to you the installation details, application startup guide, dependencies and more. This application use some patterns like [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) and [Git flow](https://nvie.com/posts/a-successful-git-branching-model/).
@@ -16,11 +15,13 @@ If you want a live version [click here](https://angular-calculator-hazel.vercel.
 
 - NodeJS => v.16.14.0
 - NPM => v8.3.1
-- Angular CLI => v11.1.2
+- Angular CLI => v13.3.11
+
+Obs.: Angular CLI could be installed as global resource, but if you want to use angular from project. Do not install angular CLI global in node (npm i -g @angular/cli).
 
 ## Installation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2 and actual version is 13.3.11
 
 **1 -** Clone the project and install the dependencies:
 
