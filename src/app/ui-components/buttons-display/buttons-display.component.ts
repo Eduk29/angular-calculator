@@ -19,4 +19,8 @@ export class ButtonsDisplayComponent implements OnInit {
   public defineButtonSize(button: ButtonConfiguration): string {
     return button.value !== '=' ? 'mx-1 w-33' : 'ms-1 w-66';
   }
+
+  public defineButtonId(button: ButtonConfiguration): string {
+    return `button-${button.cssIdentifier}`;
+  }
 }
