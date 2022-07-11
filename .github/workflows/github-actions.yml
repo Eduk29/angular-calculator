@@ -3,6 +3,28 @@ name: Angular Calculator Actions
 on: [push]
 
 jobs:
+  run-linters:
+    name: RLinters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Node install
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.14.0"
+
+      # ESLint and Prettier must be in `package.json`
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
+
   unit-test:
     name: Unit Tests
     runs-on: ubuntu-latest
