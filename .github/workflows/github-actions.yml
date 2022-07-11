@@ -4,9 +4,10 @@ on: [push]
 
 jobs:
   unit-test:
-    name: Unit Test
+    name: Unit Tests
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
 
       - name: Node install
@@ -28,6 +29,27 @@ jobs:
           name: codecov-umbrella # optional
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)
+
+  e2e-test:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node install
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.14.0'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          build: npm run build
+          start: npm start
 
 
   build:
