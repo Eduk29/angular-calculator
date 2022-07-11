@@ -8,7 +8,7 @@ const fakeButtonConfiguration: ButtonConfiguration = {
   label: 'fake button',
   type: 'number',
   value: 'fake number',
-  cssIdentifier: ''
+  cssIdentifier: '',
 };
 
 describe('CoreService', () => {

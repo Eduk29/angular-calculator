@@ -9,10 +9,14 @@
         "*.ts"
       ],
       "parserOptions": {
+        "ecmaVersion": 2017,
         "project": [
           "tsconfig.json",
           "e2e/tsconfig.json"
         ],
+        "env": {
+          "es6": true
+        },
         "createDefaultProgram": true
       },
       "extends": [
