@@ -12,9 +12,8 @@ describe('ButtonComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ButtonComponent],
-      providers: [CoreService]
-    })
-      .compileComponents();
+      providers: [CoreService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -41,7 +40,7 @@ describe('ButtonComponent', () => {
       id: 1,
       label: 'fake button',
       type: 'number',
-      value: 'fake number'
+      value: 'fake number',
     };
     component.buttonConfiguration = fakeButtonConfiguration;
 
@@ -58,7 +57,6 @@ describe('ButtonComponent', () => {
     expect(component.color).not.toBe('primary');
   });
 
-
   it(`${ButtonComponent.prototype.buttonClickEvent.name} SHOULD call next on number subject WHEN called with type number`, () => {
     spyOn(service, 'callNextOnNumberSubject');
     component.buttonConfiguration.type = 'number';
@@ -74,13 +72,15 @@ describe('ButtonComponent', () => {
       id: 1,
       label: 'fake button',
       type: 'number',
-      value: 'fake number'
+      value: 'fake number',
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;
     component.buttonClickEvent();
 
-    expect(service.callNextOnNumberSubject).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.callNextOnNumberSubject).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 
   it(`${ButtonComponent.prototype.buttonClickEvent.name} SHOULD call next on operation subject WHEN called with type operation`, () => {
@@ -98,13 +98,15 @@ describe('ButtonComponent', () => {
       id: 1,
       label: 'fake button',
       type: 'operation',
-      value: 'fake operation'
+      value: 'fake operation',
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;
     component.buttonClickEvent();
 
-    expect(service.callNextOnOperationSubject).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.callNextOnOperationSubject).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 
   it(`${ButtonComponent.prototype.buttonClickEvent.name} SHOULD call next on general subject WHEN called with type general`, () => {
@@ -122,12 +124,14 @@ describe('ButtonComponent', () => {
       id: 1,
       label: 'fake button',
       type: 'general',
-      value: 'fake general'
+      value: 'fake general',
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;
     component.buttonClickEvent();
 
-    expect(service.callNextOnGeneralSubject).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.callNextOnGeneralSubject).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 });

@@ -8,7 +8,7 @@ export function buildButtonConfiguration(): ButtonConfiguration[] {
       id: i + 1,
       label: '',
       type: '',
-      value: ''
+      value: '',
     });
   }
   return buttonConfigurations;
