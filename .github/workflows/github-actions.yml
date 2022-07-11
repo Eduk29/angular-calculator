@@ -49,12 +49,12 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           build: npm run build
-          start: npm start
+          start: npm run start
 
   build:
     name: Build App
     runs-on: ubuntu-latest
-    needs: [unit-test]
+    needs: [unit-test, e2e-test]
     steps:
       - uses: actions/checkout@v2
 
