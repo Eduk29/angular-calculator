@@ -6,7 +6,6 @@
 ![latest-tag-badge](https://badgen.net/github/tag/eduk29/angular-calculator)
 ![last-commit-badge](https://img.shields.io/github/last-commit/eduk29/angular-calculator?style=plastic)
 
-
 This project is a study application, so it may contain some errors. Will be a pleasure receive your code review, suggestions and/or tips. :raised_hands:
 
 This application is based in Angular with Typescript and RxJS. For unit test, the application use Karma and Jasmine. This readme presents to you the installation details, application startup guide, dependencies and more. This application use some patterns like [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) and [Git flow](https://nvie.com/posts/a-successful-git-branching-model/).
@@ -79,4 +78,4 @@ npm run test-coverage
 
 José Eduardo Trindade E Marques  
 [LinkedIn](https://www.linkedin.com/in/eduardomarques29/)  
-edu.temarques@gmail.com  
+edu.temarques@gmail.com

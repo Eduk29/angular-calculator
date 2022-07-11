@@ -1,17 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-screen-display',
   templateUrl: './screen-display.component.html',
-  styleUrls: ['./screen-display.component.scss']
+  styleUrls: ['./screen-display.component.scss'],
 })
-export class ScreenDisplayComponent implements OnInit {
-
+export class ScreenDisplayComponent {
   @Input() displayData: string | number = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor() {}
 }

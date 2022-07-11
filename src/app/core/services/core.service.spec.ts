@@ -36,7 +36,9 @@ describe('CoreService', () => {
 
     service.callNextOnNumberSubject(fakeButtonConfiguration);
 
-    expect(service.numberClickEvent$.next).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.numberClickEvent$.next).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 
   it('numberClickEvent$ SHOULD return mocked data in next call WHEN callNextOnNumberSubject is called with mocked data', (done: DoneFn) => {
@@ -46,7 +48,6 @@ describe('CoreService', () => {
     });
 
     service.callNextOnNumberSubject(fakeButtonConfiguration);
-
   });
 
   it('operationClickEvent$ SHOULD call next fuction WHEN callNextOnOperationSubject is called', () => {
@@ -62,7 +63,9 @@ describe('CoreService', () => {
 
     service.callNextOnOperationSubject(fakeButtonConfiguration);
 
-    expect(service.operationClickEvent$.next).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.operationClickEvent$.next).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 
   it('operationClickEvent$ SHOULD return mocked data in next call WHEN callNextOnOperationSubject is called with mocked data', (done: DoneFn) => {
@@ -72,7 +75,6 @@ describe('CoreService', () => {
     });
 
     service.callNextOnOperationSubject(fakeButtonConfiguration);
-
   });
 
   it('generalClickEvent$ SHOULD call next fuction WHEN callNextOnGeneralSubject is called', () => {
@@ -88,7 +90,9 @@ describe('CoreService', () => {
 
     service.callNextOnGeneralSubject(fakeButtonConfiguration);
 
-    expect(service.generalClickEvent$.next).toHaveBeenCalledWith(fakeButtonConfiguration);
+    expect(service.generalClickEvent$.next).toHaveBeenCalledWith(
+      fakeButtonConfiguration
+    );
   });
 
   it('generalClickEvent$ SHOULD return mocked data in next call WHEN callNextOnGeneralSubject is called with mocked data', (done: DoneFn) => {
@@ -98,6 +102,5 @@ describe('CoreService', () => {
     });
 
     service.callNextOnGeneralSubject(fakeButtonConfiguration);
-
   });
 });

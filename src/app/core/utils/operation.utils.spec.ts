@@ -1,13 +1,18 @@
-import { addOperation, minusOperation, multiplicationOperation, divisionOperation, operationsUtils } from './operations.utils';
+import {
+  addOperation,
+  minusOperation,
+  multiplicationOperation,
+  divisionOperation,
+  operationsUtils,
+} from './operations.utils';
 import { TestBed } from '@angular/core/testing';
 
 describe('Operation Utils', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({ })
-      .compileComponents();
+    await TestBed.configureTestingModule({}).compileComponents();
   });
 
-  beforeEach(() => { });
+  beforeEach(() => {});
 
   it('Add operation SHOULD return 4 WHEN first number is 2 and second number is 2', () => {
     const firstNumber = 2;
@@ -76,6 +81,4 @@ describe('Operation Utils', () => {
 
     expect(+result).toBe(3);
   });
-
-
 });

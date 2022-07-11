@@ -18,7 +18,6 @@ import { operationsUtils } from './utils/operations.utils';
   styleUrls: ['./core.component.scss'],
 })
 export class CoreComponent implements OnInit {
-
   public clickEvent = new Subject<ButtonConfiguration>();
   public displayData: string = '0';
   public generalPurposeMatrixDisplay: any[] = [];
@@ -29,12 +28,18 @@ export class CoreComponent implements OnInit {
   private operation: string = '';
   private secondNumber: number = 0;
 
-  constructor(private coreService: CoreService) { }
+  constructor(private coreService: CoreService) {}
 
   ngOnInit(): void {
     this.registerClickSubscriptions();
-    this.numberButtonsMatrixDisplay = this.createButtonsMatrix(numberRowSize, numberButtonConfiguration);
-    this.operationButtonsMatrixDisplay = this.createButtonsMatrix(operationsRowSize, operationsButtonConfiguration);
+    this.numberButtonsMatrixDisplay = this.createButtonsMatrix(
+      numberRowSize,
+      numberButtonConfiguration
+    );
+    this.operationButtonsMatrixDisplay = this.createButtonsMatrix(
+      operationsRowSize,
+      operationsButtonConfiguration
+    );
     this.generalPurposeMatrixDisplay = generalPurposeButtonConfiguration;
   }
 
@@ -42,19 +47,28 @@ export class CoreComponent implements OnInit {
     return operationsUtils(this.operation, this.firstNumber, this.secondNumber);
   }
 
-  private createButtonsMatrix(rowSize: number, buttonConfiguration: ButtonConfiguration[]): any[][] {
+  private createButtonsMatrix(
+    rowSize: number,
+    buttonConfiguration: ButtonConfiguration[]
+  ): any[][] {
     const buttonMatrix: any[][] = [];
     const numberRows = buttonConfiguration.length / rowSize;
     let initial = 0;
 
     for (let i = 0; i < numberRows; i++) {
-      buttonMatrix.push(this.createMatrixRow(initial, rowSize, buttonConfiguration));
+      buttonMatrix.push(
+        this.createMatrixRow(initial, rowSize, buttonConfiguration)
+      );
       initial += rowSize;
     }
     return buttonMatrix;
   }
 
-  private createMatrixRow(initial: number, rowSize: number, array: ButtonConfiguration[]): any[] {
+  private createMatrixRow(
+    initial: number,
+    rowSize: number,
+    array: ButtonConfiguration[]
+  ): any[] {
     return this.getRowFromArray(array, initial, rowSize);
   }
 
@@ -74,7 +88,11 @@ export class CoreComponent implements OnInit {
     }
   }
 
-  private getRowFromArray(buttonConfigurations: ButtonConfiguration[], initial: number, rowSize: number): ButtonConfiguration[] {
+  private getRowFromArray(
+    buttonConfigurations: ButtonConfiguration[],
+    initial: number,
+    rowSize: number
+  ): ButtonConfiguration[] {
     let buttonRow: any[] = [];
     buttonConfigurations.map(() => {
       buttonRow = buttonConfigurations.slice(initial, initial + rowSize);
@@ -90,7 +108,11 @@ export class CoreComponent implements OnInit {
   }
 
   private isNewCalculus(): boolean {
-    return this.firstNumber !== 0 && this.secondNumber !== 0 && +this.displayData !== 0;
+    return (
+      this.firstNumber !== 0 &&
+      this.secondNumber !== 0 &&
+      +this.displayData !== 0
+    );
   }
 
   private numberButtonClickEvent(button: ButtonConfiguration): void {
@@ -112,17 +134,23 @@ export class CoreComponent implements OnInit {
   }
 
   private registerClickSubscriptions(): void {
-    this.coreService.numberClickEvent$.subscribe(button => {
-      this.numberButtonClickEvent(button);
-    });
+    this.coreService.numberClickEvent$.subscribe(
+      (button: ButtonConfiguration) => {
+        this.numberButtonClickEvent(button);
+      }
+    );
 
-    this.coreService.operationClickEvent$.subscribe(button => {
-      this.operationButtonClickEvent(button);
-    });
+    this.coreService.operationClickEvent$.subscribe(
+      (button: ButtonConfiguration) => {
+        this.operationButtonClickEvent(button);
+      }
+    );
 
-    this.coreService.generalClickEvent$.subscribe(button => {
-      this.generalButtonClickEvent(button);
-    });
+    this.coreService.generalClickEvent$.subscribe(
+      (button: ButtonConfiguration) => {
+        this.generalButtonClickEvent(button);
+      }
+    );
   }
 
   private resetCalculator(mode: string): void {
@@ -136,9 +164,8 @@ export class CoreComponent implements OnInit {
 
   private verifyNewCalculusFlow(button: ButtonConfiguration): void {
     if (this.isNewCalculus()) {
-      this.resetCalculator('hard');  // TODO: CHANGE STRING TO ENUM
+      this.resetCalculator('hard'); // TODO: CHANGE STRING TO ENUM
       this.numberButtonClickEvent(button);
     }
   }
 }
-

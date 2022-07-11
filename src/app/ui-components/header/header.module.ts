@@ -6,16 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './header.component';
 
 @NgModule({
-  declarations: [
-    HeaderComponent
-  ],
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatToolbarModule
-  ],
-  exports: [
-    HeaderComponent
-  ]
+  declarations: [HeaderComponent],
+  imports: [CommonModule, MatIconModule, MatToolbarModule],
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}
