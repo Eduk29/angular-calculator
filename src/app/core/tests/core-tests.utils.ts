@@ -9,7 +9,7 @@ export function buildButtonConfiguration(): ButtonConfiguration[] {
       label: '',
       type: '',
       value: '',
-      cssIdentifier: ''
+      cssIdentifier: '',
     });
   }
   return buttonConfigurations;
