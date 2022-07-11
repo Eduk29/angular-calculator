@@ -1,9 +1,6 @@
 name: Angular Calculator Actions
 
-on:
-  push:
-    branches:
-    - main
+on: [push]
 
 jobs:
   unit-test:
