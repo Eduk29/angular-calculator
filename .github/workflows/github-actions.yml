@@ -71,21 +71,8 @@ jobs:
           npm i -g @bahmutov/print-env
           print-env GITHUB
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Cache Cypress binary
-        uses: actions/cache@v1
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-${{ runner.os }}-cypress-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            cypress-${{ runner.os }}-cypress-
+      - name: Install dependencies
+        run: npm install
 
       - name: install dependencies and verify Cypress
         run: |
