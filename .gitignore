@@ -47,3 +47,5 @@ Thumbs.db
 
 .vercel
 .angular
+/cypress/screenshots
+/cypress/videos
