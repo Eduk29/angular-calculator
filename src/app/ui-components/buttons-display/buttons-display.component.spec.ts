@@ -41,7 +41,8 @@ describe('ButtonsDisplayComponent', () => {
       id: 1,
       label: 'fake AC button',
       type: 'general',
-      value: 'AC'
+      value: 'AC',
+      cssIdentifier: ''
     };
 
     const cssClass = component.defineButtonSize(fakeButtonConfiguration);
@@ -54,7 +55,8 @@ describe('ButtonsDisplayComponent', () => {
       id: 1,
       label: 'fake equal button',
       type: 'general',
-      value: '='
+      value: '=',
+      cssIdentifier: ''
     };
 
     const cssClass = component.defineButtonSize(fakeButtonConfiguration);

@@ -98,7 +98,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
     component['displayData'] = '2';
     component['secondNumber'] = 0;
@@ -114,7 +115,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeEqualButton);
@@ -128,7 +130,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: 'AC',
       value: 'AC',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeACButton);
@@ -142,7 +145,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: 'AC',
       value: 'AC',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeACButton);
@@ -156,7 +160,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '.',
       value: '.',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeDecimalButton);
@@ -170,7 +175,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '.',
       value: '.',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeDecimalButton);
@@ -222,7 +228,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '0';
@@ -237,7 +244,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
@@ -253,7 +261,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
@@ -269,7 +278,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
@@ -285,7 +295,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
     component.displayData = '23';
 
@@ -300,7 +311,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -314,7 +326,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -328,7 +341,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -343,7 +357,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '1',
       value: '1',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     service.numberClickEvent$.next(fakeNumberButton);
@@ -358,7 +373,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '1',
       value: '1',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     service.numberClickEvent$.next(fakeNumberButton);
@@ -373,7 +389,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     service.operationClickEvent$.next(fakeOperationButton);
@@ -388,7 +405,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
 
@@ -404,7 +422,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     service.generalClickEvent$.next(fakeGeneralButton);
@@ -419,7 +438,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
 
@@ -460,7 +480,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -475,7 +496,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -490,7 +512,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -506,7 +529,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -522,7 +546,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
