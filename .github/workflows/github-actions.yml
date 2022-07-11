@@ -65,11 +65,11 @@ jobs:
         with:
           node-version: '14.17.1'
 
-    # just so we learn about available environment variables GitHub provides
-    - name: Print env variables
-      run: |
-        npm i -g @bahmutov/print-env
-        print-env GITHUB
+      # just so we learn about available environment variables GitHub provides
+      - name: Print env variables
+        run: |
+          npm i -g @bahmutov/print-env
+          print-env GITHUB
 
       - name: Cache node modules
         uses: actions/cache@v1
@@ -152,4 +152,3 @@ jobs:
           vercel-args: '--prod' #Optional
           vercel-org-id: ${{ secrets.ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
-
