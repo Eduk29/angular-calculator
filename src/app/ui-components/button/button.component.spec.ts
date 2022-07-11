@@ -41,6 +41,7 @@ describe('ButtonComponent', () => {
       label: 'fake button',
       type: 'number',
       value: 'fake number',
+      cssIdentifier: ''
     };
     component.buttonConfiguration = fakeButtonConfiguration;
 
@@ -73,6 +74,7 @@ describe('ButtonComponent', () => {
       label: 'fake button',
       type: 'number',
       value: 'fake number',
+      cssIdentifier: ''
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;
@@ -99,6 +101,7 @@ describe('ButtonComponent', () => {
       label: 'fake button',
       type: 'operation',
       value: 'fake operation',
+      cssIdentifier: ''
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;
@@ -125,6 +128,7 @@ describe('ButtonComponent', () => {
       label: 'fake button',
       type: 'general',
       value: 'fake general',
+      cssIdentifier: ''
     };
 
     component.buttonConfiguration = fakeButtonConfiguration;

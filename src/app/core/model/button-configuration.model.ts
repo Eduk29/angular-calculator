@@ -3,4 +3,5 @@ export interface ButtonConfiguration {
   label: string;
   value: number | string;
   type: string;
+  cssIdentifier: string;
 }
