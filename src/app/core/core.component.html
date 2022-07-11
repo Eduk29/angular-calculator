@@ -1,9 +1,7 @@
-<main class="d-flex flex-column justify-content-center align-items-center">
+<main id="calculator" class="d-flex flex-column justify-content-center align-items-center">
   <mat-card class="calculator">
     <mat-card-content>
-      <app-screen-display
-        class="w-100"
-        [displayData]="displayData">
+      <app-screen-display class="w-100" [displayData]="displayData">
       </app-screen-display>
       <app-buttons-display
         [numberButtonsMatrixDisplay]="numberButtonsMatrixDisplay"

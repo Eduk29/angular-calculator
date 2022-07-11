@@ -8,9 +8,8 @@ describe('ScreenDisplayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenDisplayComponent ]
-    })
-    .compileComponents();
+      declarations: [ScreenDisplayComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -26,5 +25,4 @@ describe('ScreenDisplayComponent', () => {
   it(`displayData SHOULD be zero WHEN component is created`, () => {
     expect(component.displayData).toEqual(0);
   });
-
 });

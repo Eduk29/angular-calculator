@@ -9,14 +9,13 @@ import { buildButtonConfiguration } from './tests/core-tests.utils';
 describe('CoreComponent', () => {
   let component: CoreComponent;
   let fixture: ComponentFixture<CoreComponent>;
-  let service: CoreService
+  let service: CoreService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoreComponent ],
-      providers: [ CoreService ]
-    })
-    .compileComponents();
+      declarations: [CoreComponent],
+      providers: [CoreService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -72,9 +71,13 @@ describe('CoreComponent', () => {
 
   it(`${CoreComponent.prototype['createButtonsMatrix'].name} SHOULD return a two dimensions matrix WHEN row size is 3 and mocked button configuration has 9 items`, () => {
     const rowSize: number = 3;
-    const buttonConfigurations: ButtonConfiguration[] = buildButtonConfiguration();
+    const buttonConfigurations: ButtonConfiguration[] =
+      buildButtonConfiguration();
 
-    const matrix = component['createButtonsMatrix'](rowSize, buttonConfigurations);
+    const matrix = component['createButtonsMatrix'](
+      rowSize,
+      buttonConfigurations
+    );
 
     expect(matrix.length).toEqual(3);
     expect(matrix[0].length).toEqual(3);
@@ -84,10 +87,15 @@ describe('CoreComponent', () => {
 
   it(`${CoreComponent.prototype['createMatrixRow'].name} SHOULD return an array with 3 elements WHEN row size is 3 and mocked button configuration has 9 items`, () => {
     const rowSize: number = 3;
-    const buttonConfigurations: ButtonConfiguration[] = buildButtonConfiguration();
+    const buttonConfigurations: ButtonConfiguration[] =
+      buildButtonConfiguration();
     const initial = 0;
 
-    const row = component['createMatrixRow'](initial, rowSize, buttonConfigurations);
+    const row = component['createMatrixRow'](
+      initial,
+      rowSize,
+      buttonConfigurations
+    );
 
     expect(row.length).toEqual(3);
   });
@@ -98,7 +106,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
     component['displayData'] = '2';
     component['secondNumber'] = 0;
@@ -109,12 +118,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['generalButtonClickEvent'].name} SHOULD call calculate function WHEN button pressed is equal button`, () => {
-    spyOn<any>(component, 'calculate').and.callFake(() => { });
+    spyOn<any>(component, 'calculate').and.callFake(() => {});
     const fakeEqualButton: ButtonConfiguration = {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeEqualButton);
@@ -123,12 +133,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['generalButtonClickEvent'].name} SHOULD call reset Calculator function WHEN button pressed is AC button`, () => {
-    spyOn<any>(component, 'resetCalculator').and.callFake(() => { });
+    spyOn<any>(component, 'resetCalculator').and.callFake(() => {});
     const fakeACButton: ButtonConfiguration = {
       id: 1,
       label: 'AC',
       value: 'AC',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeACButton);
@@ -137,12 +148,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['generalButtonClickEvent'].name} SHOULD call reset calculator function with hard parameter WHEN button pressed is AC button`, () => {
-    spyOn<any>(component, 'resetCalculator').and.callFake(() => { });
+    spyOn<any>(component, 'resetCalculator').and.callFake(() => {});
     const fakeACButton: ButtonConfiguration = {
       id: 1,
       label: 'AC',
       value: 'AC',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeACButton);
@@ -151,12 +163,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['generalButtonClickEvent'].name} SHOULD call number button click event function WHEN button pressed is decimal button`, () => {
-    spyOn<any>(component, 'numberButtonClickEvent').and.callFake(() => { });
+    spyOn<any>(component, 'numberButtonClickEvent').and.callFake(() => {});
     const fakeDecimalButton: ButtonConfiguration = {
       id: 1,
       label: '.',
       value: '.',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeDecimalButton);
@@ -165,25 +178,33 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['generalButtonClickEvent'].name} SHOULD call number button click event function with decimal button data WHEN button pressed is decimal button`, () => {
-    spyOn<any>(component, 'numberButtonClickEvent').and.callFake(() => { });
+    spyOn<any>(component, 'numberButtonClickEvent').and.callFake(() => {});
     const fakeDecimalButton: ButtonConfiguration = {
       id: 1,
       label: '.',
       value: '.',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['generalButtonClickEvent'](fakeDecimalButton);
 
-    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(fakeDecimalButton);
+    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(
+      fakeDecimalButton
+    );
   });
 
   it(`${CoreComponent.prototype['getRowFromArray'].name} SHOULD return an array with 3 elements WHEN row size is 3 and number of elements in buttons configurations is 9`, () => {
     const rowSize: number = 3;
-    const buttonConfigurations: ButtonConfiguration[] = buildButtonConfiguration();
+    const buttonConfigurations: ButtonConfiguration[] =
+      buildButtonConfiguration();
     const initial = 0;
 
-    const row = component['getRowFromArray'](buttonConfigurations, initial, rowSize);
+    const row = component['getRowFromArray'](
+      buttonConfigurations,
+      initial,
+      rowSize
+    );
 
     expect(row.length).toEqual(3);
   });
@@ -222,7 +243,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '0';
@@ -237,7 +259,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
@@ -253,7 +276,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
@@ -269,14 +293,17 @@ describe('CoreComponent', () => {
       id: 1,
       label: '2',
       value: '2',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     component.displayData = '23';
 
     component['numberButtonClickEvent'](fakeNumberButton);
 
-    expect(component['verifyNewCalculusFlow']).toHaveBeenCalledWith(fakeNumberButton);
+    expect(component['verifyNewCalculusFlow']).toHaveBeenCalledWith(
+      fakeNumberButton
+    );
   });
 
   it(`${CoreComponent.prototype['operationButtonClickEvent'].name} SHOULD update first number with displayData variable WHEN some operation click event occurs`, () => {
@@ -285,7 +312,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
     component.displayData = '23';
 
@@ -295,12 +323,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['operationButtonClickEvent'].name} SHOULD update operation with operation button data WHEN some operation click event occurs`, () => {
-    spyOn<any>(component, 'resetCalculator').and.callFake(() => { });
+    spyOn<any>(component, 'resetCalculator').and.callFake(() => {});
     const fakeNumberButton: ButtonConfiguration = {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -309,12 +338,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['operationButtonClickEvent'].name} SHOULD call reset calculator fuction to clean display screen WHEN variables updates`, () => {
-    spyOn<any>(component, 'resetCalculator').and.callFake(() => { });
+    spyOn<any>(component, 'resetCalculator').and.callFake(() => {});
     const fakeNumberButton: ButtonConfiguration = {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -323,12 +353,13 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['operationButtonClickEvent'].name} SHOULD call reset calculator fuction to clean display screen with parameter soft WHEN variables updates`, () => {
-    spyOn<any>(component, 'resetCalculator').and.callFake(() => { });
+    spyOn<any>(component, 'resetCalculator').and.callFake(() => {});
     const fakeNumberButton: ButtonConfiguration = {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     component['operationButtonClickEvent'](fakeNumberButton);
@@ -343,7 +374,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '1',
       value: '1',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     service.numberClickEvent$.next(fakeNumberButton);
@@ -358,13 +390,16 @@ describe('CoreComponent', () => {
       id: 1,
       label: '1',
       value: '1',
-      type: 'number'
+      type: 'number',
+      cssIdentifier: ''
     };
 
     service.numberClickEvent$.next(fakeNumberButton);
     component['registerClickSubscriptions']();
 
-    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(fakeNumberButton);
+    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(
+      fakeNumberButton
+    );
   });
 
   it(`${CoreComponent.prototype['registerClickSubscriptions'].name} SHOULD register a handle function to operation click event WHEN called`, () => {
@@ -373,7 +408,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     service.operationClickEvent$.next(fakeOperationButton);
@@ -388,14 +424,16 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
-
 
     service.operationClickEvent$.next(fakeOperationButton);
     component['registerClickSubscriptions']();
 
-    expect(component['operationButtonClickEvent']).toHaveBeenCalledWith(fakeOperationButton);
+    expect(component['operationButtonClickEvent']).toHaveBeenCalledWith(
+      fakeOperationButton
+    );
   });
 
   it(`${CoreComponent.prototype['registerClickSubscriptions'].name} SHOULD register a handle function to ganeral button click event WHEN called`, () => {
@@ -404,7 +442,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
 
     service.generalClickEvent$.next(fakeGeneralButton);
@@ -419,19 +458,20 @@ describe('CoreComponent', () => {
       id: 1,
       label: '+',
       value: 'add',
-      type: 'operation'
+      type: 'operation',
+      cssIdentifier: ''
     };
-
 
     service.generalClickEvent$.next(fakeGeneralButton);
     component['registerClickSubscriptions']();
 
-    expect(component['generalButtonClickEvent']).toHaveBeenCalledWith(fakeGeneralButton);
+    expect(component['generalButtonClickEvent']).toHaveBeenCalledWith(
+      fakeGeneralButton
+    );
   });
 
-
   it(`${CoreComponent.prototype['resetCalculator'].name} SHOULD call soft reset fuction WHEN parameter is soft`, () => {
-    spyOn<any>(component, 'softReset').and.callFake(() => { });
+    spyOn<any>(component, 'softReset').and.callFake(() => {});
     const fakeMode: string = 'soft';
 
     component['resetCalculator'](fakeMode);
@@ -440,7 +480,7 @@ describe('CoreComponent', () => {
   });
 
   it(`${CoreComponent.prototype['resetCalculator'].name} SHOULD call hard reset fuction WHEN parameter is hard`, () => {
-    spyOn<any>(component, 'hardReset').and.callFake(() => { });
+    spyOn<any>(component, 'hardReset').and.callFake(() => {});
     const fakeMode: string = 'hard';
 
     component['resetCalculator'](fakeMode);
@@ -460,7 +500,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -475,7 +516,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -490,7 +532,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -506,7 +549,8 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
@@ -522,12 +566,14 @@ describe('CoreComponent', () => {
       id: 1,
       label: '=',
       value: '=',
-      type: 'general'
+      type: 'general',
+      cssIdentifier: ''
     };
 
     component['verifyNewCalculusFlow'](fakeNumberButton);
 
-    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(fakeNumberButton);
+    expect(component['numberButtonClickEvent']).toHaveBeenCalledWith(
+      fakeNumberButton
+    );
   });
-
 });

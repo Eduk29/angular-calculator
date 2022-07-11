@@ -4,18 +4,9 @@ import { MatCardModule } from '@angular/material/card';
 
 import { ScreenDisplayComponent } from './screen-display.component';
 
-
-
 @NgModule({
-  declarations: [
-    ScreenDisplayComponent
-  ],
-  imports: [
-    CommonModule,
-    MatCardModule
-  ],
-  exports: [
-    ScreenDisplayComponent
-  ]
+  declarations: [ScreenDisplayComponent],
+  imports: [CommonModule, MatCardModule],
+  exports: [ScreenDisplayComponent],
 })
-export class ScreenDisplayModule { }
+export class ScreenDisplayModule {}

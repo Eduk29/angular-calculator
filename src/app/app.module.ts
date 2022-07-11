@@ -8,9 +8,7 @@ import { CoreModule } from './core/core.module';
 import { HeaderModule } from './ui-components/header/header.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -19,6 +17,6 @@ import { HeaderModule } from './ui-components/header/header.module';
     HeaderModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
