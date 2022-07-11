@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Node install
         uses: actions/setup-node@v2
@@ -50,7 +50,6 @@ jobs:
         with:
           build: npm run build
           start: npm start
-
 
   build:
     name: Build App
