@@ -60,6 +60,17 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
+      - name: Node install
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.1'
+
+    # just so we learn about available environment variables GitHub provides
+    - name: Print env variables
+      run: |
+        npm i -g @bahmutov/print-env
+        print-env GITHUB
+
       - name: Cache node modules
         uses: actions/cache@v1
         with:
