@@ -3,8 +3,8 @@ name: Angular Calculator Actions
 on: [push]
 
 jobs:
-  run-linters:
-    name: RLinters
+  linters:
+    name: Linters
     runs-on: ubuntu-latest
     steps:
       - name: Check out Git repository
@@ -78,7 +78,7 @@ jobs:
   build:
     name: Build App
     runs-on: ubuntu-latest
-    needs: [unit-test, e2e-test]
+    needs: [linters, unit-test, e2e-test]
     steps:
       - uses: actions/checkout@v2
 
