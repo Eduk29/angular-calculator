@@ -54,6 +54,14 @@ But if you want only the code coverage run the following instruction:
 npm run test-coverage
 ```
 
+## Running E2E tests
+
+To run the e2e tests of application run the following instruction:
+
+```bash
+npm run e2e
+```
+
 ## Running lint
 
 To run the lint in application run the following instruction:
@@ -61,6 +69,7 @@ To run the lint in application run the following instruction:
 ```bash
 npm run lint
 ```
+
 ## Dependecies
 
 - Angular Framework
