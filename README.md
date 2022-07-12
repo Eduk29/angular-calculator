@@ -54,6 +54,14 @@ But if you want only the code coverage run the following instruction:
 npm run test-coverage
 ```
 
+## Running E2E tests
+
+To run the e2e tests of application run the following instruction:
+
+```bash
+npm run e2e
+```
+
 ## Running lint
 
 To run the lint in application run the following instruction:
@@ -61,6 +69,7 @@ To run the lint in application run the following instruction:
 ```bash
 npm run lint
 ```
+
 ## Dependecies
 
 - Angular Framework
@@ -69,8 +78,9 @@ npm run lint
 - Cypress
 - Cucumber
 - ESLint
-- Karma
 - Jasmine
+- Husky
+- Karma
 - Prettier
 - RxJS
 - Typescript
@@ -85,7 +95,7 @@ npm run lint
 - Use ESLint and Prettier as Linter :heavy_check_mark:
 - E2E tests with Cypress :heavy_check_mark:
 - Upgrade E2E tests with Cucumber :heavy_check_mark:
-- Use [Husky](https://github.com/typicode/husky) to inspect commits and improvements
+- Use [Husky](https://github.com/typicode/husky) to inspect commits and improvements :heavy_check_mark:
 - Implement a percentage calculator
 - Implement a square root calculator
 - Add [release-please](https://github.com/googleapis/release-please) to project
