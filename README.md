@@ -67,6 +67,7 @@ npm run lint
 - Angular Material
 - Bootstrap
 - Cypress
+- Cucumber
 - ESLint
 - Karma
 - Jasmine
