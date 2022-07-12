@@ -76,6 +76,7 @@ npm run lint
 - Angular Material
 - Bootstrap
 - Cypress
+- Cucumber
 - ESLint
 - Karma
 - Jasmine
@@ -92,7 +93,7 @@ npm run lint
 
 - Use ESLint and Prettier as Linter :heavy_check_mark:
 - E2E tests with Cypress :heavy_check_mark:
-- Upgrade E2E tests with Cucumber
+- Upgrade E2E tests with Cucumber :heavy_check_mark:
 - Use [Husky](https://github.com/typicode/husky) to inspect commits and improvements
 - Implement a percentage calculator
 - Implement a square root calculator

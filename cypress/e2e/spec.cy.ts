@@ -1,3 +1,4 @@
+/**  Old cypress implementation, upgraded by cucumber implementation  */
 describe('Test Application', () => {
 
   beforeEach(() => {

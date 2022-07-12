@@ -49,3 +49,6 @@ Thumbs.db
 .angular
 /cypress/screenshots
 /cypress/videos
+
+/cypress
+cypress.config.ts
