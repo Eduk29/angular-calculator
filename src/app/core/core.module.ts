@@ -9,15 +9,9 @@ import { CoreComponent } from './core.component';
 import { CoreService } from './services/core.service';
 
 @NgModule({
-  declarations: [CoreComponent],
-  imports: [
-    ButtonModule,
-    ButtonsDisplayModule,
-    CommonModule,
-    ScreenDisplayModule,
-    MatCardModule,
-  ],
-  providers: [CoreService],
-  exports: [CoreComponent],
+    declarations: [CoreComponent],
+    imports: [ButtonModule, ButtonsDisplayModule, CommonModule, ScreenDisplayModule, MatCardModule],
+    providers: [CoreService],
+    exports: [CoreComponent],
 })
 export class CoreModule {}

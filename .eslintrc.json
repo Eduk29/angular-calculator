@@ -40,7 +40,8 @@
             "style": "camelCase",
             "type": "attribute"
           }
-        ]
+        ],
+        "indent": "error"
       }
     },
     {
