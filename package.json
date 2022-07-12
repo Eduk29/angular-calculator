@@ -1,16 +1,6 @@
 {
   "name": "angular-calculator",
   "version": "1.2.0",
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "nonGlobalStepBaseDir": "cypress/integration/",
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    }
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
