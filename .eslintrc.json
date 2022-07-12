@@ -16,7 +16,7 @@
         ],
         "env": {
           "es6": true
-        },
+      },
         "createDefaultProgram": true
       },
       "extends": [
