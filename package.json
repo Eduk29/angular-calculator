@@ -1,11 +1,6 @@
 {
   "name": "angular-calculator",
   "version": "1.2.1",
-  "husky": {
-     "hooks": {
-        "pre-commit": "npm run prettier:check"
-      }
-   },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,7 +12,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "lint": "npx eslint \"src/**/*.{js,jsx,ts,tsx,html}\" --quiet --fix",
-    "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html}\" --write"
+    "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html}\" --write",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -61,7 +57,7 @@
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.4.0",
